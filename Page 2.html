@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ticket.ty</title>
+
+    <!-- EXACTEMENT COMME LA PREMIÈRE PAGE -->
+
+    <link rel="stylesheet" href="Page 2.css">
+    <!-- MÊME POLICE QUE LA PREMIÈRE PAGE -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS DE LA PAGE 2 -->
+  </head>
+
+<body>
+
+    <!-- =====================================================
+         BANNIÈRE — MÊME STRUCTURE QUE LA PREMIÈRE PAGE
+         ===================================================== -->
+
+    <div class="texte-defilant">
+
+    <!-- PC + MOBILE : 1 -->
+    <div class="texte texte-1">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9h16v11H4z"></path>
+                <path d="M3 9l2-5h14l2 5"></path>
+                <path d="M8 9v11"></path>
+                <path d="M16 9v11"></path>
+                <path d="M3 9h18"></path>
+            </svg>
+        </span>
+        <span>Plus grande boutique en ligne de cartes de paiement</span>
+    </div>
+
+    <!-- PC + MOBILE : 2 -->
+    <div class="texte texte-2">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 11V5a2 2 0 0 1 4 0v5"></path>
+                <path d="M11 10V4a2 2 0 0 1 4 0v7"></path>
+                <path d="M15 11V6a2 2 0 0 1 4 0v7"></path>
+                <path d="M7 10l-1-1a2 2 0 0 0-3 3l5 7a5 5 0 0 0 4 2h4a5 5 0 0 0 5-5v-4"></path>
+            </svg>
+        </span>
+        <span> Revendeur certifié</span>
+    </div>
+
+    <!-- PC + MOBILE : 3 -->
+    <div class="texte texte-3">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+            </svg>
+        </span>
+        <span>Paiement sûr et sécurisé</span>
+    </div>
+
+    <!-- PC + MOBILE : 4 -->
+    <div class="texte texte-4">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2L3 14h7l-1 8 10-12h-7z"></path>
+            </svg>
+        </span>
+        <span> Livraison en ligne instantanée</span>
+    </div>
+
+</div>
+
+<div class="navigation">
+
+    <div class="logo">
+        <span class="logo-icon">➤</span>
+        <span>ticket<span>.ty</span></span>
+    </div>
+
+    <div class="navigation-droite">
+
+        <div class="selecteur-langue" id="selecteurLangue">
+
+            <div class="modal-langues" id="modalLangues">
+
+                <div class="modal-contenu">
+
+                    <div class="modal-entete">
+                        <h2>Pays/Région</h2>
+
+                        <button class="fermer-langues" id="fermerLangues">
+                            ×
+                        </button>
+                    </div>
+
+                    <p class="description-langues">
+                        Sélectionnez la région de votre choix pour vos achats
+                    </p>
+
+                    <div class="recherche-langues">
+                        <span class="icone-recherche">⌕</span>
+
+                        <input
+                            type="text"
+                            id="recherchePays"
+                            placeholder="Rechercher"
+                        >
+                    </div>
+
+                    <div class="liste-pays">
+
+                        <button class="pays-modal" data-lang="fr" data-code="BE">
+                            <span class="drapeau-pays drapeau-be">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+
+                            <span class="nom-pays">Belgique</span>
+
+                            <span class="radio-pays"></span>
+                        </button>
+
+                        <button class="pays-modal selectionne" data-lang="fr" data-code="FR">
+                            <span class="drapeau-pays drapeau-fr">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+
+                            <span class="nom-pays">France</span>
+
+                            <span class="radio-pays"></span>
+                        </button>
+
+                        <button class="pays-modal" data-lang="de" data-code="DE">
+                            <span class="drapeau-pays drapeau-de">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+
+                            <span class="nom-pays">Allemagne</span>
+
+                            <span class="radio-pays"></span>
+                        </button>
+
+                        <button class="pays-modal" data-lang="en" data-code="GB">
+                            <span class="drapeau-pays drapeau-gb"></span>
+
+                            <span class="nom-pays">Royaume-Uni</span>
+
+                            <span class="radio-pays"></span>
+                        </button>
+
+                        <button class="pays-modal" data-lang="nl" data-code="NL">
+                            <span class="drapeau-pays drapeau-nl">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+
+                            <span class="nom-pays">Pays-Bas</span>
+
+                            <span class="radio-pays"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="bouton-langue" id="boutonLangue" type="button">
+
+                <span class="drapeau-fr" id="drapeauActuel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span id="codeLangue">FR</span>
+
+            </button>
+
+            <div class="menu-langues" id="menuLangues">
+
+                <button class="pays-option" data-lang="fr" data-code="BE">
+                    <span class="drapeau-pays drapeau-be">
+                        <span></span><span></span><span></span>
+                    </span>
+                    <span class="code-pays">BE</span>
+                </button>
+
+                <button class="pays-option selectionne" data-lang="fr" data-code="FR">
+                    <span class="drapeau-pays drapeau-fr">
+                        <span></span><span></span><span></span>
+                    </span>
+                    <span class="code-pays">FR</span>
+                </button>
+
+                <button class="pays-option" data-lang="de" data-code="DE">
+                    <span class="drapeau-pays drapeau-de">
+                        <span></span><span></span><span></span>
+                    </span>
+                    <span class="code-pays">DE</span>
+                </button>
+
+                <button class="pays-option" data-lang="en" data-code="GB">
+                    <span class="drapeau-pays drapeau-gb"></span>
+                    <span class="code-pays">GB</span>
+                </button>
+
+                <button class="pays-option" data-lang="nl" data-code="NL">
+                    <span class="drapeau-pays drapeau-nl">
+                        <span></span><span></span><span></span>
+                    </span>
+                    <span class="code-pays">NL</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="bouton-aide">AIDE</div>
+
+    </div>
+
+</div>
+ <!-- fermeture navigation -->
+
+<!-- PUBLICITÉ MOBILE -->
+<div class="publicite-mobile" id="publiciteMobile">
+
+    <button
+        class="fermer-publicite"
+        id="fermerPublicite"
+        type="button"
+    >×</button>
+
+    <img
+        src="Image publicitaire/Image mobile.webp"
+        alt=""
+    >
+
+    <div class="texte-publicite-mobile">
+
+        <h2>
+            Économisez<br>
+            10%<br>
+            dans l’app
+        </h2>
+
+        <p>
+            Profitez d’une réduction sur<br>
+            votre 1re commande sur l’app
+        </p>
+
+        <div class="boutons-stores-mobile">
+
+            <div class="store-google">
+                <span class="store-logo">▶</span>
+                <span>
+                    <small>DISPONIBLE SUR</small>
+                    Google Play
+                </span>
+            </div>
+
+            <div class="store-apple">
+                <span class="apple-store-logo">●</span>
+                <span>
+                    <small>Télécharger dans</small>
+                    l’App Store
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FIL D'ARIANE -->
+<div class="fil-ariane" id="retourCategorie">
+    <span class="fleche-retour">‹</span>
+    <span id="nom-categorie">Carte de paiement</span>
+</div>
+
+<div class="commande-zone">
+
+    <div class="carte-transcash">
+        <img id="imageProduit" src="" alt="">
+    </div>
+
+    <div class="avantages-image">
+
+    <div class="avantage">
+        <span class="icone">⚡</span>
+        <span>Livraison en ligne instantanée</span>
+    </div>
+
+    <div class="avantage">
+        <span class="icone">♧</span>
+        <span>Paiement sûr et sécurisé</span>
+    </div>
+
+    <div class="avantage">
+        <span class="icone">🎟</span>
+        <span>Revendeur certifié</span>
+    </div>
+
+</div>
+
+    <div class="zone-commande">
+        <h1>Recharge Transcash en ligne</h1>
+        <div class="montants"></div>
+
+       <div class="select-quantite">
+    <span class="libelle-quantite">Quantité</span>
+    <span class="valeur-quantite">1</span>
+    <span class="fleche-quantite">⌄</span>
+</div>
+
+        <div class="prix-unitaire">20 EUR</div>
+
+        <div class="textes-avantages">
+            <div class="texte-avantage"></div>
+            <div class="texte-avantage"></div>
+            <div class="texte-avantage"></div>
+        </div>
+
+       <button class="bouton-acheter" type="button">
+    Acheter
+</button>
+
+<div class="paiement-express">
+
+    <div class="titre-paiement">
+        <span></span>
+        <strong>Paiement express</strong>
+        <span></span>
+    </div>
+
+    <button class="apple-pay" type="button">
+        <span class="apple-logo"></span>
+        <span>Pay</span>
+    </button>
+
+    <div class="moyens-paiement">
+
+        <div class="moyen cb">
+            <span>CB</span>
+        </div>
+
+        <div class="moyen visa">
+            <span>VISA</span>
+        </div>
+
+        <div class="moyen mastercard">
+            <span></span>
+        </div>
+
+        <div class="moyen paypal">
+            <span>PayPal</span>
+        </div>
+
+        <span class="autres">+ bien d'autres</span>
+        </div>
+      </div>
+
+   </div>
+</div>
+
+<!-- PUBLICITÉ PC -->
+<div class="publicite-pc">
+
+    <img
+        src="Image publicitaire/Image pc.webp"
+        alt=""
+    >
+
+    <div class="texte-publicite-pc">
+        <h2>Économisez<br>10% dans l’app</h2>
+
+        <p>Profitez d’une réduction sur votre 1re commande sur l’app</p>
+
+        <div class="boutons-stores-pc">
+
+            <div class="store-google">
+                <span class="store-logo">▶</span>
+                <span>
+                    <small>DISPONIBLE SUR</small>
+                    Google Play
+                </span>
+            </div>
+
+            <div class="store-apple">
+                <span class="apple-store-logo">●</span>
+                <span>
+                    <small>Télécharger dans</small>
+                    l’App Store
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- =========================================================
+     TICKETS SUIVANTS
+     ========================================================= -->
+<section class="tickets-suivants">
+
+    <div class="liste-tickets-suivants" id="listeTicketsSuivants">
+        <!-- Les tickets seront ajoutés automatiquement par JS -->
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CONTENU TEXTE + QUESTIONS
+     ===================================================== -->
+
+<section class="contenu-informations">
+
+    <div class="colonne-information" id="colonneInformation">
+    </div>
+
+    <div class="colonne-faq" id="colonneFaq">
+    </div>
+
+</section>
+ </div>
+    <script src="Page 2.js"></script>
+
+</body>
+
+</html>
+
+

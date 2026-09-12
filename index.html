@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ticket.ty</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="texte-defilant">
+
+    <!-- PC + MOBILE : 1 -->
+    <div class="texte texte-1">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9h16v11H4z"></path>
+                <path d="M3 9l2-5h14l2 5"></path>
+                <path d="M8 9v11"></path>
+                <path d="M16 9v11"></path>
+                <path d="M3 9h18"></path>
+            </svg>
+        </span>
+        <span>Plus grande boutique en ligne de cartes de paiement</span>
+    </div>
+
+
+    <!-- PC + MOBILE : 2 -->
+    <div class="texte texte-2">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 11V5a2 2 0 0 1 4 0v5"></path>
+                <path d="M11 10V4a2 2 0 0 1 4 0v7"></path>
+                <path d="M15 11V6a2 2 0 0 1 4 0v7"></path>
+                <path d="M7 10l-1-1a2 2 0 0 0-3 3l5 7a5 5 0 0 0 4 2h4a5 5 0 0 0 5-5v-4"></path>
+            </svg>
+        </span>
+        <span> Revendeur certifié</span>
+    </div>
+
+
+    <!-- PC + MOBILE : 3 -->
+    <div class="texte texte-3">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+            </svg>
+        </span>
+        <span>Paiement sûr et sécurisé</span>
+    </div>
+
+
+    <!-- PC + MOBILE : 4 -->
+    <div class="texte texte-4">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2L3 14h7l-1 8 10-12h-7z"></path>
+            </svg>
+        </span>
+        <span> Livraison en ligne instantanée</span>
+    </div>
+
+</div>
+
+<div class="navigation">
+    <div class="logo">
+        <span class="logo-icon">➤</span>
+        <span>ticket<span>.ty</span></span>
+    </div>
+
+    <div class="navigation-droite">
+
+       <div class="selecteur-langue" id="selecteurLangue">
+        <div class="modal-langues" id="modalLangues">
+
+    <div class="modal-contenu">
+
+        <div class="modal-entete">
+            <h2>Pays/Région</h2>
+
+            <button class="fermer-langues" id="fermerLangues">
+                ×
+            </button>
+        </div>
+
+        <p class="description-langues">
+            Sélectionnez la région de votre choix pour vos achats
+        </p>
+
+        <div class="recherche-langues">
+            <span class="icone-recherche">⌕</span>
+            <input
+                type="text"
+                id="recherchePays"
+                placeholder="Rechercher"
+            >
+        </div>
+
+
+        <div class="liste-pays">
+
+           <button class="pays-modal" data-lang="fr" data-code="BE">
+                <span class="drapeau-pays drapeau-be">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="nom-pays">Belgique</span>
+
+                <span class="radio-pays"></span>
+            </button>
+
+
+            <button class="pays-modal selectionne" data-lang="fr" data-code="FR">
+                <span class="drapeau-pays drapeau-fr">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="nom-pays">France</span>
+
+                <span class="radio-pays"></span>
+            </button>
+
+
+            <button class="pays-modal" data-lang="de" data-code="DE">
+                <span class="drapeau-pays drapeau-de">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="nom-pays">Allemagne</span>
+
+                <span class="radio-pays"></span>
+            </button>
+
+
+            <button class="pays-modal" data-lang="en" data-code="GB">
+                <span class="drapeau-pays drapeau-gb"></span>
+
+                <span class="nom-pays">Royaume-Uni</span>
+
+                <span class="radio-pays"></span>
+            </button>
+
+
+            <button class="pays-modal" data-lang="nl" data-code="NL">
+                <span class="drapeau-pays drapeau-nl">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="nom-pays">Pays-Bas</span>
+
+                <span class="radio-pays"></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <button class="bouton-langue" id="boutonLangue" type="button">
+       <span class="drapeau-fr" id="drapeauActuel">
+    <span></span>
+    <span></span>
+    <span></span>
+</span>
+        <span id="codeLangue">FR</span>
+    </button>
+
+    <!-- MENU DES PAYS -->
+   <div class="menu-langues" id="menuLangues">
+
+    <button class="pays-option" data-lang="fr" data-code="BE">
+        <span class="drapeau-pays drapeau-be">
+            <span></span><span></span><span></span>
+        </span>
+        <span class="code-pays">BE</span>
+    </button>
+
+    <button class="pays-option selectionne" data-lang="fr" data-code="FR">
+        <span class="drapeau-pays drapeau-fr">
+            <span></span><span></span><span></span>
+        </span>
+        <span class="code-pays">FR</span>
+    </button>
+
+    <button class="pays-option" data-lang="de" data-code="DE">
+        <span class="drapeau-pays drapeau-de">
+            <span></span><span></span><span></span>
+        </span>
+        <span class="code-pays">DE</span>
+    </button>
+
+    <button class="pays-option" data-lang="en" data-code="GB">
+        <span class="drapeau-pays drapeau-gb"></span>
+        <span class="code-pays">GB</span>
+    </button>
+
+    <button class="pays-option" data-lang="nl" data-code="NL">
+        <span class="drapeau-pays drapeau-nl">
+            <span></span><span></span><span></span>
+        </span>
+        <span class="code-pays">NL</span>
+    </button>
+
+</div>
+
+</div>
+       <div class="bouton-aide">AIDE</div>
+
+    </div>
+</div>
+
+  <div class="galerie">
+    <div class="galerie-images ordinateur">
+        <img src="Ordinateur/image1.png" alt="Image 1">
+        <img src="Ordinateur/image2.png" alt="Image 2">
+        <img src="Ordinateur/image3.png" alt="Image 3">
+        <img src="Ordinateur/image4.png" alt="Image 4">
+        <img src="Ordinateur/image5.png" alt="Image 5">
+    </div>
+
+    <div class="galerie-images mobile">
+        <img src="Mobile/image1.png" alt="Image 1">
+        <img src="Mobile/image2.png" alt="Image 2">
+        <img src="Mobile/image3.png" alt="Image 3">
+        <img src="Mobile/image4.png" alt="Image 4">
+        <img src="Mobile/image5.png" alt="Image 5">
+    </div>
+<div class="fleche-gauche">❮</div>
+<div class="fleche-droite">❯</div>
+
+<div class="indicateurs">
+    <span class="indicateur actif"></span>
+    <span class="indicateur"></span>
+    <span class="indicateur"></span>
+    <span class="indicateur"></span>
+    <span class="indicateur"></span>
+</div>
+
+</div>   
+
+
+<section class="tickets-section">
+
+    <h2>Produits les plus populaires</h2>
+
+    <div class="categories">
+        <button class="categorie active">Tout afficher</button>
+        <button class="categorie">Crédit d'appel</button>
+        <button class="categorie">Crédit de paiement</button>
+        <button class="categorie">Carte cadeau musique, TV & apps</button>
+        <button class="categorie">Carte cadeau jeux vidéo</button>
+    </div>
+
+</section>
+
+
+<div class="tickets-container">
+
+    <!-- TOUT AFFICHER -->
+    <div class="ticket-card" data-categorie="Tout afficher">
+        <button>
+            <img src="Tout afficher/Google Play.png" alt="Google Play">
+            <span>Google Play</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Tout afficher">
+        <button>
+            <img src="Tout afficher/PaysafeCard.png" alt="PaysafeCard">
+            <span>PaysafeCard</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Tout afficher">
+        <button>
+            <img src="Tout afficher/SFR.png" alt="SFR">
+            <span>SFR</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Tout afficher">
+        <button>
+            <img src="Tout afficher/Apple Gift Card.png" alt="Apple Gift Card">
+            <span>Apple Gift Card</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Tout afficher">
+        <button>
+            <img src="Tout afficher/Steam.png" alt="Steam">
+            <span>Steam</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Tout afficher">
+        <button>
+            <img src="Tout afficher/CASHlib.png" alt="CASHlib">
+            <span>CASHlib</span>
+        </button>
+    </div>
+
+
+    <!-- CRÉDIT D'APPEL -->
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+        <button>
+            <img src="Crédit d'appel/SFR.png" alt="SFR">
+            <span>SFR</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+        <button>
+            <img src="Crédit d'appel/Lycamobile.png" alt="Lycamobile">
+            <span>Lycamobile</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+        <button>
+            <img src="Crédit d'appel/Orange.png" alt="Orange">
+            <span>Orange</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+        <button>
+            <img src="Crédit d'appel/Lebara.png" alt="Lebara">
+            <span>Lebara</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+        <button>
+            <img src="Crédit d'appel/Syma.png" alt="Syma">
+            <span>Syma</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+        <button>
+            <img src="Crédit d'appel/La Poste Mobile.png" alt="La Poste Mobile">
+            <span>La Poste Mobile</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+        <button>
+            <img src="Crédit d'appel/Free.png" alt="Free">
+            <span>Free</span>
+        </button>
+    </div>
+
+
+    <!-- CRÉDIT DE PAIEMENT -->
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/PaysafeCard.png" alt="PaysafeCard">
+            <span>CPaysafeCard</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/CASHlib.png" alt="CASHlib">
+            <span>CASHlib</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/PCS.png" alt="PCS">
+            <span>PCS</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/Transcash.png" alt="Transcash">
+            <span>Transcash</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/Neosurf.png" alt="Neosurf">
+            <span>Neosurf</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/PaysafeCard Players Pass x Steam.png" alt="PaysafeCard Players Pass x Steam">
+            <span>PaysafeCard Players Pass x Steam</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/Flexepin.png" alt="Flexepin">
+            <span>Flexepin</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/Toneo First.png" alt="Toneo First">
+            <span>Toneo First</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/Aplauz.png" alt="Aplauz">
+            <span>Aplauz</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/Bitsa.png" alt="Bitsa">
+            <span>Bitsa</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/MINT.png" alt="MINT">
+            <span>MINT</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit de paiement">
+        <button>
+            <img src="Crédit de paiement/Rewarble Advanced Cash.png" alt="Rewarble Advanced Cash">
+            <span>Rewarble Advanced Cash</span>
+        </button>
+    </div>
+
+    <div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/SFR.png" alt="SFR"><span>SFR</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Lycamobile.png" alt="Lycamobile"><span>Lycamobile</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Orange.png" alt="Orange"><span>Orange</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Lebara.png" alt="Lebara"><span>Lebara</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Syma.png" alt="Syma"><span>Syma</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/La Poste Mobile.png" alt="La Poste Mobile"><span>La Poste Mobile</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Free.png" alt="Free"><span>Free</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/SFR.png" alt="SFR"><span>SFR</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Lycamobile.png" alt="Lycamobile"><span>Lycamobile</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Orange.png" alt="Orange"><span>Orange</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Lebara.png" alt="Lebara"><span>Lebara</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Syma.png" alt="Syma"><span>Syma</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/La Poste Mobile.png" alt="La Poste Mobile"><span>La Poste Mobile</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit d'appel">
+    <button><img src="Crédit d'appel/Free.png" alt="Free"><span>Free</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/PaysafeCard.png" alt="PaysafeCard"><span>PaysafeCard</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/CASHlib.png" alt="CASHlib"><span>CASHlib</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/PCS.png" alt="PCS"><span>PCS</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/Transcash.png" alt="Transcash"><span>Transcash</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/Neosurf.png" alt="Neosurf"><span>Neosurf</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/PaysafeCard Players Pass x Steam.png" alt="PaysafeCard Players Pass x Steam"><span>PaysafeCard Players Pass x Steam</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/Flexepin.png" alt="Flexepin"><span>Flexepin</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/Toneo First.png" alt="Toneo First"><span>Toneo First</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/Aplauz.png" alt="Aplauz"><span>Aplauz</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/Bitsa.png" alt="Bitsa"><span>Bitsa</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/MINT.png" alt="11"><span>MINT</span></button>
+</div>
+<div class="ticket-card" data-categorie="Crédit de paiement">
+    <button><img src="Crédit de paiement/Rewarble Advanced Cash.png" alt="Rewarble Advanced Cash"><span>Rewarble Advanced Cash</span></button>
+</div>
+
+<!-- CARTE CADEAU MUSIQUE, TV & APPS -->
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Google Play.png" alt="Google Play"><span>Google Play</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Apple Gift Card.png" alt="Apple Gift Card"><span>Apple Gift Card</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Amazon.png" alt="Amazon"><span>Amazon</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Uber.png" alt="Uber"><span>Uber</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Fnac.png" alt="Fnac"><span>Fnac</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Netflix.png" alt="Netflix"><span>Netflix</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/TikTok.png" alt="TikTok"><span>TikTok</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Tinder Gold.png" alt="Tinder Gold"><span>Tinder Gold</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Airbnb.png" alt="Airbnb"><span>Airbnb</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/10.png" alt="Adidas"><span>10</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Deliveroo.png" alt="Deliveroo"><span>Deliveroo</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Lastminute.png" alt="Lastminute"><span>Lastminute</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Mango.png" alt="Mango"><span>Mango</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Meta Quest.png" alt="Meta Quest"><span>Meta Quest</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Nike.png" alt="Nike"><span>Nike</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Primark.png" alt="Primark"><span>Primark</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Treatwell.png" alt="Treatwell"><span>Treatwell</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Twitch.png" alt="Twitch"><span>Twitch</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Zalando.png" alt="Zalando"><span>Zalando</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Disney+.png" alt="Disney+"><span>Disney+</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau musique, TV & apps">
+    <button><img src="Carte cadeau musique, TV & apps/Tinder Plus.png" alt="Tinder Plus"><span>Tinder Plus</span></button>
+</div>
+
+<!-- CARTE CADEAU JEUX VIDÉO -->
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Roblox.png" alt="Roblox"><span>Roblox</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Google Play.png" alt="Google Play"><span>Google Play</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Steam.png" alt="Steam"><span>Steam</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/PlayStation Store.png" alt="PlayStation Store"><span>PlayStation Store</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Xbox.png" alt="Xbox"><span>Xbox</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Razer Gold.png" alt="Razer Gold"><span>Razer Gold</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Nintendo eShop.png" alt="Nintendo eShop"><span>Nintendo eShop</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Playstation Plus.png" alt="Playstation Plus"><span>Playstation Plus</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Fortnite.png" alt="Fortnite"><span>Fortnite</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Microsoft.png" alt="Microsoft"><span>Microsoft</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Battle.net.png" alt="Battle.net"><span>Battle.net</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Hearthstone.png" alt="Hearthstone"><span>Hearthstone</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/League of Legends.png" alt="League of Legends"><span>League of Legends</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Valorant.png" alt="Valorant"><span>Valorant</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/World of Warcraft.png" alt="World of Warcraft"><span>World of Warcraft</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Nintendo Switch Games.png" alt="Nintendo Switch Games"><span>Nintendo Switch Games</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/Nintendo Switch Online.png" alt="Nintendo Switch Online"><span>Nintendo Switch Online</span></button>
+</div>
+
+<div class="ticket-card" data-categorie="Carte cadeau jeux vidéo">
+    <button><img src="Carte cadeau jeux vidéo/PUBG Mobile.png" alt="PUBG Mobile"><span>PUBG Mobile</span></button>
+</div>
+</div>
+
+<div class="conteneur-bouton-tout-afficher">
+    <button class="bouton-tout-afficher">Tout afficher</button>
+</div>
+
+<!-- SECTION INFORMATIONS TICKET.TY -->
+<section class="section-infos">
+
+    <div class="infos-introduction">
+        <p>
+            Recharge.fr est la plus grande boutique en ligne de
+            France pour les cartes de paiement, les cartes cadeaux et les
+            recharges mobiles.
+        </p>
+    </div>
+
+    <div class="infos-carrousel">
+
+        <div class="info-bloc">
+            <div class="info-icone icone-client">♙</div>
+            <h3>+ de 50 millions</h3>
+            <h4>de clients</h4>
+            <p>
+                Nous répondons aux besoins des clients à tout moment,
+                n’importe où dans le monde.
+            </p>
+        </div>
+
+        <div class="info-bloc">
+            <div class="info-icone icone-vitesse">ϟ</div>
+            <h3>5 secondes</h3>
+            <h4>pour la livraison en ligne</h4>
+            <p>
+                99,7 % des commandes sont livrées en 5 secondes.
+            </p>
+        </div>
+
+        <div class="info-bloc">
+            <div class="info-icone icone-confiance">♡</div>
+            <h3>Confiance</h3>
+            <h4>accordée par les plus grandes marques</h4>
+            <p>
+                Vente de produits certifiés de grandes marques
+                et de services de premier plan.
+            </p>
+        </div>
+
+        <div class="info-bloc">
+            <div class="info-icone icone-produits">▱</div>
+            <h3>+ de 16 000</h3>
+            <h4>produits</h4>
+            <p>
+                La plus grande boutique en ligne de cartes cadeaux,
+                cartes de paiement, cartes de jeu et recharges mobiles.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="categories-verticales">
+
+    <!-- CRÉDIT D'APPEL -->
+    <section class="categorie-bloc">
+    <div class="titre-categorie-verticale">
+        <h3>Crédit d'appel</h3>
+        <button class="tout-afficher-vertical">Tout afficher ></button>
+    </div>
+
+        <div class="tickets-ligne">
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit d'appel/SFR.png" alt="SFR">
+                    <span>SFR</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit d'appel/Lycamobile.png" alt="Lycamobile">
+                    <span>Lycamobile</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit d'appel/Orange.png" alt="Orange">
+                    <span>Orange</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit d'appel/Lebara.png" alt="Lebara">
+                    <span>Lebara</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit d'appel/Syma.png" alt="Syma">
+                    <span>Syma</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit d'appel/La Poste Mobile.png" alt="La Poste Mobile">
+                    <span>La Poste Mobile</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit d'appel/Free.png" alt="Free">
+                    <span>Free</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CRÉDIT DE PAIEMENT -->
+    <section class="categorie-bloc">
+    <div class="titre-categorie-verticale">
+        <h3>Crédit de paiement</h3>
+        <button class="tout-afficher-vertical">Tout afficher ></button>
+    </div>
+
+        <div class="tickets-ligne">
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/PaysafeCard.png" alt="PaysafeCard">
+                    <span>PaysafeCard</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/CASHlib.png" alt="CASHlib">
+                    <span>CASHlib</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/PCS.png" alt="PCS">
+                    <span>PCS</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/Transcash.png" alt="Transcash">
+                    <span>Transcash</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/Neosurf.png" alt="Neosurf">
+                    <span>Neosurf</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/PaysafeCard Players Pass x Steam.png" alt="PaysafeCard Players Pass x Steam">
+                    <span>PaysafeCard Players Pass x Steam</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/Flexepin.png" alt="Flexepin">
+                    <span>Flexepin</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/Toneo First.png" alt="Toneo First">
+                    <span>Toneo First</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/Aplauz.png" alt="Aplauz">
+                    <span>Aplauz</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/Bitsa.png" alt="Bitsa">
+                    <span>Bitsa</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/MINT.png" alt="MINT">
+                    <span>MINT</span>
+                </button>
+            </div>
+
+            <div class="ticket-card">
+                <button>
+                    <img src="Crédit de paiement/Rewarble Advanced Cash.png" alt="Rewarble Advanced Cash">
+                    <span>Rewarble Advanced Cash</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CARTE CADEAU MUSIQUE, TV & APPS -->
+    <section class="categorie-bloc">
+    <div class="titre-categorie-verticale">
+        <h3>Carte cadeau musique, TV & apps</h3>
+        <button class="tout-afficher-vertical">Tout afficher ></button>
+    </div>
+
+        <div class="tickets-ligne">
+           <div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Google Play.png" alt="Google Play">
+        <span>Google Play</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Apple Gift Card.png" alt="Apple Gift Card">
+        <span>Apple Gift Card</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Amazon.png" alt="Amazon">
+        <span>Amazon</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Uber.png" alt="Uber">
+        <span>Uber</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Fnac.png" alt="Fnac">
+        <span>Fnac</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Netflix.png" alt="Netflix">
+        <span>Netflix</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/TikTok.png" alt="TikTok">
+        <span>TikTok</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Tinder Gold.png" alt="Tinder Gold">
+        <span>Tinder Gold</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Airbnb.png" alt="Airbnb">
+        <span>Airbnb</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Adidas.png" alt="Adidas">
+        <span>Adidas</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/11.png" alt="Deliveroo">
+        <span>11</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Deliveroo.png" alt="Lastminute">
+        <span>Deliveroo</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Mango.png" alt="Mango">
+        <span>Mango</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Meta Quest.png" alt="Meta Quest">
+        <span>Meta Quest</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Nike.png" alt="Nike">
+        <span>Nike</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Primark.png" alt="Primark">
+        <span>Primark</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Treatwell.png" alt="Treatwell">
+        <span>Treatwell</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Twitch.png" alt="Twitch">
+        <span>Twitch</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Zalando.png" alt="Zalando">
+        <span>Zalando</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Disney+.png" alt="Disney+">
+        <span>Disney+</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau musique, TV & apps/Tinder Plus.png" alt="Tinder Plus">
+        <span>Tinder Plus</span>
+    </button>
+</div>
+        </div>
+    </section>
+
+
+    <!-- CARTE CADEAU JEUX VIDÉO -->
+    <section class="categorie-bloc">
+    <div class="titre-categorie-verticale">
+        <h3>Carte cadeau jeux vidéo</h3>
+        <button class="tout-afficher-vertical">Tout afficher ></button>
+    </div>
+
+    
+        <div class="tickets-ligne">
+           <div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Roblox.png" alt="Roblox">
+        <span>Roblox</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Google Play.png" alt="Google Play">
+        <span>Google Play</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Steam.png" alt="Steam">
+        <span>Steam</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/PlayStation Store.png" alt="PlayStation Store">
+        <span>PlayStation Store</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Xbox.png" alt="Xbox">
+        <span>Xbox</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Razer Gold.png" alt="Razer Gold">
+        <span>Razer Gold</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Nintendo eShop.png" alt="Nintendo eShop">
+        <span>Nintendo eShop</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Playstation Plus.png" alt="Playstation Plus">
+        <span>Playstation Plus</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Fortnite.png" alt="Fortnite">
+        <span>Fortnite</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Microsoft.png" alt="Microsoft">
+        <span>Microsoft</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Battle.net.png" alt="Battle.net">
+        <span>Battle.net</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Hearthstone.png" alt="Hearthstone">
+        <span>Hearthstone</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/League of Legends.png" alt="League of Legends">
+        <span>League of Legends</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Valorant.png" alt="Valorant">
+        <span>Valorant</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/World of Warcraft.png" alt="World of Warcraft">
+        <span>World of Warcraft</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Nintendo Switch Games.png" alt="Nintendo Switch Games">
+        <span>Nintendo Switch Games</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/Nintendo Switch Online.png" alt="Nintendo Switch Online">
+        <span>Nintendo Switch Online</span>
+    </button>
+</div>
+
+<div class="ticket-card">
+    <button>
+        <img src="Carte cadeau jeux vidéo/PUBG Mobile.png" alt="PUBG Mobile">
+        <span>PUBG Mobile</span>
+    </button>
+</div>
+    </section>
+
+    <!-- SECTION AVIS TRUSTPILOT -->
+<section class="section-avis">
+
+    <div class="avis-entete">
+        <h2>Des milliers de clients nous font confiance sur Trustpilot</h2>
+
+        <div class="avis-note">
+            <span>Bien 3.9 sur 5</span>
+            <strong>★</strong>
+            <span>Trustpilot</span>
+        </div>
+    </div>
+
+    <div class="avis-carrousel">
+
+        <div class="avis-carte">
+            <div class="avis-top">
+                <span class="etoiles">★★★★★</span>
+                <span>par cliente</span>
+                <span>il y a 2 jours</span>
+            </div>
+            <h3>Cool application</h3>
+            <p>Cool application</p>
+        </div>
+
+        <div class="avis-carte">
+            <div class="avis-top">
+                <span class="etoiles">★★★★★</span>
+                <span>par WARINGER...</span>
+                <span>il y a 5 jours</span>
+            </div>
+            <h3>Rapide</h3>
+            <p>Rapide, efficace, sécurisé. Je n'ai jamais eu de problème avec recharge.com</p>
+        </div>
+
+        <div class="avis-carte">
+            <div class="avis-top">
+                <span class="etoiles">★★★★<span class="etoile-vide">★</span></span>
+                <span>par Maryse</span>
+                <span>il y a 5 jours</span>
+            </div>
+            <h3>Un application facile et très...</h3>
+            <p>Un application facile et très pratique</p>
+        </div>
+
+        <div class="avis-carte">
+            <div class="avis-top">
+                <span class="etoiles">★★★★★</span>
+                <span>par COEN...</span>
+                <span>il y a 5 jours</span>
+            </div>
+            <h3>facile rapide et simple</h3>
+            <p>facile rapide et simple</p>
+        </div>
+
+    </div>
+
+</section>
+    
+<!-- SECTION ACTUALITÉS -->
+<section class="section-actualites">
+
+    <div class="actualites-entete">
+        <h2>Actualités</h2>
+
+        <button class="actualites-tout-afficher">
+            Tout afficher
+            <span>›</span>
+        </button>
+    </div>
+
+    <div class="actualites-carrousel">
+
+        <article class="actualite-card">
+            <h3>Skimming : Comment protéger sa carte bancaire en 2026 ?</h3>
+
+            <p>
+                Qu'est-ce que le skimming en 2026 ? Découvrez le
+                fonctionnement de cette fraude ...
+            </p>
+
+            <div class="actualite-bas">
+                <span>2026-08-04</span>
+                <button>
+                    Lire la suite <span>›</span>
+                </button>
+            </div>
+        </article>
+
+        <article class="actualite-card">
+            <h3>GTA 6 vs GTA 5 : Le comparatif ultime pour 2026</h3>
+
+            <p>
+                Découvrez le comparatif ultime GTA 6 vs GTA 5 en 2026.
+                Taille de la carte, graph...
+            </p>
+
+            <div class="actualite-bas">
+                <span>2026-08-04</span>
+                <button>
+                    Lire la suite <span>›</span>
+                </button>
+            </div>
+        </article>
+
+        <article class="actualite-card">
+            <h3>Arnaques crypto 2026 : comment les repérer et s'en protéger</h3>
+
+            <p>
+                Arnaques crypto en 2026 : découvrez notre guide
+                complet pour repérer les fraudes...
+            </p>
+
+            <div class="actualite-bas">
+                <span>2026-08-04</span>
+                <button>
+                    Lire la suite <span>›</span>
+                </button>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- SECTION DESCRIPTION -->
+<section class="section-description">
+
+    <h2>
+        Achetez votre recharge, carte cadeau et carte prépayée
+        sur Recharge.fr
+    </h2>
+
+    <p>
+        Recharge.fr est le site internet de référence pour acheter facilement et rapidement votre recharge, carte prépayée ou carte cadeau en ligne. Rechargez votre crédit d’appel mobile parmi plusieurs opérateurs téléphoniques en France en seulement 30 secondes. Offrez-vous également une carte bancaire prépayée, une carte prépayée de jeu ou encore une carte cadeau Musique, TV & Apps en seulement quelques clics. Le paiement est possible avec un compte Paypal ou par carte bancaire (CB, Visa, Mastercard, Maestro). Après l'achat, votre code numérique s'affiche sur votre écran et vous recevez également votre recharge par e-mail. Quelle que soit votre envie du moment, Recharge.fr a la carte prépayée pour vous. Rechargez sans plus attendre sur Recharge.fr.
+    </p>
+
+    <button class="description-lire-plus" type="button">
+    Lire plus
+</button>
+
+<div class="description-suite">
+
+
+    <h3>Recharge de crédit d'appel en ligne</h3>
+
+    <p>
+       Rechargez désormais votre crédit d'appel mobile ou votre crédit internet où vous voulez et quand vous voulez ! Pas besoin d'attendre l'ouverture du supermarché ou du tabac pour acheter par exemple une recharge Orange ou une recharge SFR Internet. Recharge.fr vend du crédit téléphonique pour tous les grands opérateurs en France. Achetez facilement recharge Lebara ou une recharge Lycamobile, et reprenez vos appels immédiatement. C'est simple : choisissez l'opérateur et le montant de la recharge, payez et revoilà en 30 secondes votre crédit téléphone rechargé.
+
+    <h3>Acheter une carte bancaire prépayée</h3>
+
+    <p>
+       Le carte de paiement prépayée est un excellent moyen de payer en ligne de façon sécurisée et anonyme. Que vous cherchiez une seconde carte bancaire afin de gérer plus facilement vos finances ou en préparation pour un voyage, la carte PCS Mastercard ou le coupon Transcash vous permettent d'augmenter le solde de votre carte Mastercard prépayée. Utilisez-la comme Mastercard secondaire, ou primaire si vous souhaitez avoir une carte bancaire sans compte. Si vous voulez faire des achats et dépenses en ligne dans le respect de votre vie privée, Recharge.fr propose également une grande sélection de codes de paiement. Vous pouvez alors effectuer des dépenses en ligne de manière anonyme sur de nombreux sites internets partenaires. Prenez une recharge Neosurf pour jouer sur les sites de poker et paris sportifs, jouer à des MMO ou pour faire du shopping en ligne. Si vous avez encore des doutes sur le paiement prépayé choisir, découvrez tout sur paysafecard et comprenez comment effectuer vos achats en ligne en toute sécurité !    </p>
+
+       <h3>Acheter une carte cadeau </h3>
+
+<p>
+    En plus des cartes de recharge mobile et cartes de paiement, Recharge.fr vous propose une gamme de cartes cadeaux pour télécharger de la musique, des applications ou regarder des films et séries TV. Une carte cadeau Amazon vous permet d'approvisionner le solde de votre compte Amazon.fr du montant de la carte prépayée achetée sur Recharge.fr. Avec la carte cadeau Zalando, vous commandez facilement sur Zalando tout en gardant le contrôle de vos dépenses. Achetez une Carte iTunes pour télécharger des applications et de la musique sur votre iPhone ou regarder des films et séries sur votre Mac. Si vous êtes sur Android ou préférez Google, la carte Google Play vous permet d'acheter facilement toutes les applications et vidéos proposées par Google Play. Pour votre PC, pensez à la carte cadeau Microsoft. Enfin, si vous voulez un abonnement Netflix sans compte bancaire, Recharge.fr a la solution pour vous. Utilisez un code Netflix pour payer pour votre abonnement sans engagement. Ainsi, plus besoin de renseigner vos données bancaires !
+</p>
+
+<h3>Acheter une carte prépayée jeux vidéo</h3>
+
+<p>
+   Enfin, si vous êtes intéressé(e) par les jeux vidéo, Recharge.fr propose du crédit de jeux vidéo et des abonnements en ligne pour plus de 14 types de consoles et jeux différents. Téléchargez des jeux pour votre PS4 et PS3 grâce à la carte PSN ou prenez l'abonnement Playstation Plus pour jouer en multijoueur en ligne. Si vous possédez une Xbox One ou Xbox 360, choisissez la carte cadeau Xbox pour télécharger des jeux Xbox et pour jouer en ligne. Et bien entendu, jouez sur PC avec Steam et profitez des soldes Steam grâce à la carte Steam.
+</p>
+ <button class="description-lire-moins" type="button">
+        Lire moins
+    </button>
+</div>
+
+</section>
+
+<footer class="pied-page">
+
+    <!-- =========================
+         VERSION PC
+    ========================== -->
+    <div class="footer-pc">
+
+        <!-- COLONNE 1 -->
+        <div class="footer-pc-presentation">
+
+            <div class="footer-logo-pc">
+                <span class="footer-logo-symbole">◉</span>
+                <span>ticket<span>.ty</span></span>
+            </div>
+
+            <p>
+                Sur Ticket.ty, achetez une carte prépayée en ligne rapidement et
+                facilement. Rechargez votre crédit d’appel mobile parmi les plus
+                grands opérateurs téléphoniques en France ou offrez-vous une carte
+                bancaire prépayée pour faciliter vos achats en ligne.
+            </p>
+
+        </div>
+
+
+        <!-- COLONNE 2 -->
+        <div class="footer-pc-colonne">
+
+            <h3>À propos de<br>nous</h3>
+
+            <a href="#">Foire aux questions<br>(FAQ)</a>
+            <a href="#">Modes de paiement</a>
+            <a href="#">Notre Entreprise</a>
+            <a href="#">Pour le business</a>
+            <a href="#">Conditions</a>
+            <a href="#">Mentions Légales</a>
+            <a href="#">Actualités</a>
+
+        </div>
+
+
+        <!-- COLONNE 3 -->
+        <div class="footer-pc-colonne">
+
+            <h3>Catégories</h3>
+
+            <a href="#">Crédit d'appel</a>
+            <a href="#">Carte de paiement</a>
+            <a href="#">Carte cadeau musique, TV &<br>apps</a>
+            <a href="#">Carte cadeau jeux vidéo</a>
+
+        </div>
+
+
+        <!-- COLONNE 4 -->
+        <div class="footer-pc-colonne">
+
+            <h3>Meilleurs<br>produits</h3>
+
+            <a href="#">Carte Google Play</a>
+            <a href="#">Recharge PaysafeCard</a>
+            <a href="#">Recharge SFR</a>
+            <a href="#">Apple Gift Card</a>
+            <a href="#">Carte Steam</a>
+            <a href="#">Recharge CASHlib en<br>ligne</a>
+
+        </div>
+
+
+        <!-- COLONNE 5 : TRUSTPILOT -->
+        <div class="footer-pc-trustpilot">
+
+            <div class="trust-bien">Bien</div>
+
+            <div class="trust-etoiles">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span class="trust-grise">★</span>
+            </div>
+
+            <div class="trust-avis">
+                <u>20 442 avis sur</u>
+                <strong>★</strong>
+                <span>Trustpilot</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         VERSION MOBILE
+    ========================== -->
+    <div class="footer-mobile">
+
+        <!-- TRUSTPILOT -->
+        <div class="footer-mobile-trustpilot">
+
+            <div class="mobile-bien">Bien</div>
+
+            <div class="mobile-etoiles">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span class="mobile-grise">★</span>
+            </div>
+
+            <div class="mobile-avis">
+                <u>20 442 avis sur</u>
+                <strong>★</strong>
+                <span>Trustpilot</span>
+            </div>
+
+        </div>
+
+
+        <!-- À PROPOS -->
+        <div class="footer-mobile-section">
+
+            <button class="footer-mobile-titre">
+                <span>À propos de nous</span>
+                <span class="footer-mobile-fleche">⌄</span>
+            </button>
+
+            <div class="footer-mobile-contenu">
+
+                <a href="#">Foire aux questions (FAQ)</a>
+                <a href="#">Modes de paiement</a>
+                <a href="#">Notre Entreprise</a>
+                <a href="#">Pour le business</a>
+                <a href="#">Conditions</a>
+                <a href="#">Mentions Légales</a>
+                <a href="#">Actualités</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CATÉGORIES -->
+        <div class="footer-mobile-section">
+
+            <button class="footer-mobile-titre">
+                <span>Catégories</span>
+                <span class="footer-mobile-fleche">⌄</span>
+            </button>
+
+            <div class="footer-mobile-contenu">
+
+                <a href="#">Crédit d'appel</a>
+                <a href="#">Carte de paiement</a>
+                <a href="#">Carte cadeau musique, TV & apps</a>
+                <a href="#">Carte cadeau jeux vidéo</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEILLEURS PRODUITS -->
+        <div class="footer-mobile-section">
+
+            <button class="footer-mobile-titre">
+                <span>Meilleurs produits</span>
+                <span class="footer-mobile-fleche">⌄</span>
+            </button>
+
+            <div class="footer-mobile-contenu">
+
+                <a href="#">Carte Google Play</a>
+                <a href="#">Recharge PaysafeCard</a>
+                <a href="#">Recharge SFR</a>
+                <a href="#">Apple Gift Card</a>
+                <a href="#">Carte Steam</a>
+                <a href="#">Recharge CASHlib en ligne</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- DESCRIPTION MOBILE -->
+        <div class="footer-mobile-description">
+
+            <p>
+                Sur Ticket.ty, achetez une carte prépayée en ligne rapidement et
+                facilement. Rechargez votre crédit d’appel mobile parmi les plus
+                grands opérateurs téléphoniques en France ou offrez-vous une carte
+                bancaire prépayée pour faciliter vos achats en ligne.
+            </p>
+
+            <div class="footer-logo-mobile">
+                <span class="footer-logo-symbole">◉</span>
+                <span>ticket<span>.ty</span></span>
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT MOBILE -->
+        <div class="footer-mobile-copyright">
+
+            <div>
+                © 2026 Ticket.ty. International B.V.<br>
+                Tous droits réservés.
+            </div>
+
+        </div>
+
+
+        <!-- LIENS MOBILE -->
+        <div class="footer-mobile-liens">
+
+            <a href="#">Plan du site</a>
+            <a href="#">Déclaration cookie</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         BAS PC
+    ========================== -->
+    <div class="footer-pc-bas">
+
+        <div>
+            © 2026 Ticket.ty. Tous droits réservés.
+        </div>
+
+        <div class="footer-pc-liens">
+
+            <a href="#">Plan du site</a>
+            <a href="#">Déclaration cookie</a>
+            <a href="#">Politique de Confidentialité</a>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+

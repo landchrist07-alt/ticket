@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge.fr - Paiement</title>
+    <link rel="stylesheet" href="Paiement.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+     BANNIÈRE
+     ===================================================== -->
+
+<div class="texte-defilant">
+
+    <!-- TEXTE 1 -->
+    <div class="texte texte-1">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9h16v11H4z"></path>
+                <path d="M3 9l2-5h14l2 5"></path>
+                <path d="M8 9v11"></path>
+                <path d="M16 9v11"></path>
+                <path d="M3 9h18"></path>
+            </svg>
+        </span>
+
+        <span>Plus grande boutique en ligne de cartes de paiement</span>
+    </div>
+
+
+    <!-- TEXTE 2 -->
+    <div class="texte texte-2">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 11V5a2 2 0 0 1 4 0v5"></path>
+                <path d="M11 10V4a2 2 0 0 1 4 0v7"></path>
+                <path d="M15 11V6a2 2 0 0 1 4 0v7"></path>
+                <path d="M7 10l-1-1a2 2 0 0 0-3 3l5 7a5 5 0 0 0 4 2h4a5 5 0 0 0 5-5v-4"></path>
+            </svg>
+        </span>
+
+        <span>Revendeur certifié</span>
+    </div>
+
+
+    <!-- TEXTE 3 -->
+    <div class="texte texte-3">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+            </svg>
+        </span>
+
+        <span>Paiement sûr et sécurisé</span>
+    </div>
+
+
+    <!-- TEXTE 4 -->
+    <div class="texte texte-4">
+        <span class="icone-banniere">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2L3 14h7l-1 8 10-12h-7z"></path>
+            </svg>
+        </span>
+
+        <span>Livraison en ligne instantanée</span>
+    </div>
+
+</div>
+
+<main class="checkout-page">
+
+    <!-- LOGO -->
+    <header class="checkout-header">
+
+        <div class="recharge-logo">
+            <span class="recharge-symbol">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+
+            <span class="recharge-name">
+                recharge<span>.fr</span>
+            </span>
+        </div>
+
+    </header>
+
+
+    <div class="checkout-layout">
+
+
+        <!-- =====================================================
+             COLONNE GAUCHE
+             ===================================================== -->
+
+        <section class="checkout-left">
+
+
+            <!-- =========================
+                 ÉTAPE 1 : EMAIL
+                 ========================= -->
+
+            <div id="emailStep" class="email-step">
+
+                <h1>Saisissez votre adresse e-mail</h1>
+
+                <div class="email-field">
+
+                    <label for="email">
+                        Adresse e-mail
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Adresse e-mail"
+                        autocomplete="email"
+                    >
+
+                    <p
+                        id="emailError"
+                        class="email-error"
+                    ></p>
+
+                </div>
+
+                <button
+                    id="continueButton"
+                    class="continue-button"
+                    type="button"
+                >
+                    Continuer
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 ÉTAPE 2 : PAIEMENT
+                 ========================= -->
+
+            <div
+                id="paymentStep"
+                class="payment-step"
+            >
+
+                <!-- EMAIL -->
+                <div class="email-confirmed">
+
+                    <div class="email-icon">
+
+                        <svg viewBox="0 0 24 24">
+                            <rect
+                                x="3"
+                                y="5"
+                                width="18"
+                                height="14"
+                                rx="3"
+                            ></rect>
+
+                            <path d="M4 7l8 6 8-6"></path>
+                        </svg>
+
+                    </div>
+
+
+                    <div class="confirmed-email">
+
+                        <strong>
+                            Adresse e-mail
+                        </strong>
+
+                        <span id="confirmedEmail">
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        id="editEmail"
+                        class="edit-email"
+                        type="button"
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M4 20h4L19 9l-4-4L4 16v4z"
+                            ></path>
+
+                            <path
+                                d="M13 6l4 4"
+                            ></path>
+
+                        </svg>
+
+                    </button>
+
+                </div>
+
+
+                <h2 class="payment-title">
+                    Choisissez un mode de paiement
+                </h2>
+
+
+                <!-- AVERTISSEMENT -->
+                <div class="warning-box">
+
+                    <div class="warning-text">
+
+                        <p>
+                            <strong>Méfiez-vous :</strong>
+                            si quelqu’un vous demande une carte cadeau
+                            contre un produit, un service ou frais,
+                            c’est sûrement une arnaque.
+                            Réfléchissez avant de partager votre code.
+                        </p>
+
+                    </div>
+
+                    <div class="gift-icon">
+
+                        <span class="gift-string"></span>
+
+                        <div class="gift-card">
+                            <span>%</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     MOYENS DE PAIEMENT
+                     ========================= -->
+
+                <div class="payment-methods">
+
+
+                    <!-- VISA -->
+                    <button
+                        class="payment-method"
+                        data-method="Visa"
+                        data-fee="0"
+                        type="button"
+                    >
+
+                        <div class="method-logo visa-logo">
+                            VISA
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                Visa
+                            </strong>
+
+                            <span>
+                                Pas de frais supplémentaires
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- MASTERCARD -->
+                    <button
+                        class="payment-method"
+                        data-method="Mastercard"
+                        data-fee="0"
+                        type="button"
+                    >
+
+                        <div class="method-logo mastercard-logo">
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                Mastercard
+                            </strong>
+
+                            <span>
+                                Pas de frais supplémentaires
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- PAYPAL -->
+                    <button
+                        class="payment-method"
+                        data-method="PayPal"
+                        data-fee="1.40"
+                        type="button"
+                    >
+
+                        <div class="method-logo paypal-logo">
+                            PayPal
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                PayPal
+                            </strong>
+
+                            <span class="fee">
+                                +1,40 EUR
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- APPLE PAY -->
+                    <button
+                        class="payment-method"
+                        data-method="Apple Pay"
+                        data-fee="0.67"
+                        type="button"
+                    >
+
+                        <div class="method-logo apple-logo">
+                            Pay
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                Apple Pay
+                            </strong>
+
+                            <span class="fee">
+                                +0,67 EUR
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- AMERICAN EXPRESS -->
+                    <button
+                        class="payment-method"
+                        data-method="American Express"
+                        data-fee="3.35"
+                        type="button"
+                    >
+
+                        <div class="method-logo amex-logo">
+                            <span>AM</span>
+                            <span>EX</span>
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                American Express
+                            </strong>
+
+                            <span class="fee">
+                                +3,35 EUR
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- PAYCONIQ -->
+                    <button
+                        class="payment-method"
+                        data-method="Payconiq by Bancontact"
+                        data-fee="0"
+                        type="button"
+                    >
+
+                        <div class="method-logo payconiq-logo">
+
+                            <span class="payconiq-yellow"></span>
+                            <span class="payconiq-blue"></span>
+
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                Payconiq by Bancontact
+                            </strong>
+
+                            <span>
+                                Pas de frais supplémentaires
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- MAESTRO -->
+                    <button
+                        class="payment-method"
+                        data-method="Maestro"
+                        data-fee="0"
+                        type="button"
+                    >
+
+                        <div class="method-logo maestro-logo">
+
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                Maestro
+                            </strong>
+
+                            <span>
+                                Pas de frais supplémentaires
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                    <!-- IDEAL -->
+                    <button
+                        class="payment-method"
+                        data-method="iDEAL"
+                        data-fee="0"
+                        type="button"
+                    >
+
+                        <div class="method-logo ideal-logo">
+
+                            <span>iDEAL</span>
+                            <small>WERO</small>
+
+                        </div>
+
+                        <div class="method-info">
+
+                            <strong>
+                                iDEAL
+                            </strong>
+
+                            <span>
+                                Pas de frais supplémentaires
+                            </span>
+
+                        </div>
+
+                        <span class="method-arrow">
+                            ›
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- SÉCURITÉ -->
+                <div class="security-box">
+
+                    <div class="security-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path
+                                d="M12 3l8 4v5c0 4.7-3.2 7.7-8 9-4.8-1.3-8-4.3-8-9V7l8-4z"
+                            ></path>
+
+                            <circle
+                                cx="12"
+                                cy="11"
+                                r="2.2"
+                            ></circle>
+
+                            <path
+                                d="M12 13.2v3"
+                            ></path>
+
+                        </svg>
+
+                    </div>
+
+                    <p>
+                        Nous assurons des paiements sécurisés.
+                        Vos données sont cryptées à tout moment.
+                        Nous traiterons toutes les informations que
+                        vous fournissez conformément à notre
+                        Politique de confidentialité.
+                    </p>
+
+                </div>
+
+
+                <footer class="checkout-footer">
+                    © 2026 Recharge.com International B.V.
+                </footer>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RÉSUMÉ DE LA COMMANDE
+             ===================================================== -->
+
+        <aside class="order-summary">
+
+            <h2>
+                Résumé de la commande
+            </h2>
+
+
+            <div class="product-summary">
+
+                <div class="transcash-logo">
+
+                    <img
+                        src="Crédit de paiement/Transcash.png"
+                        alt="Transcash"
+                    >
+
+                </div>
+
+
+                <div class="product-title">
+
+                    <strong>
+                        Recharge Transcash en ligne
+                    </strong>
+
+                    <span>
+                        France
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-lines">
+
+
+                <div class="summary-line">
+
+                    <span>
+                        1x Recharge Transcash en ligne 50 EUR
+                    </span>
+
+                    <strong>
+                        54,00EUR
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line">
+
+                    <span>
+
+                        Frais de service
+
+                        <button
+                            class="info-button"
+                            id="infoButton"
+                            type="button"
+                        >
+                            i
+                        </button>
+
+                    </span>
+
+                    <strong>
+                        6,99EUR
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line total-line">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalPrice">
+                        60,99EUR
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="promo-button"
+                id="promoButton"
+                type="button"
+            >
+
+                <span>
+                    Vous avez un code promo ?
+                </span>
+
+                <span class="promo-arrow">
+                    ⌄
+                </span>
+
+            </button>
+
+
+            <div
+                class="promo-area"
+                id="promoArea"
+            >
+
+                <input
+                    id="promoInput"
+                    type="text"
+                    placeholder="Code promo"
+                >
+
+                <button
+                    id="applyPromo"
+                    type="button"
+                >
+                    Appliquer
+                </button>
+
+            </div>
+
+
+            <div
+                class="service-tooltip"
+                id="serviceTooltip"
+            >
+                Les frais de service sont ajoutés
+                au montant de la recharge.
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="Paiement.js"></script>
+
+</body>
+</html>
